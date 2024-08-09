@@ -1,0 +1,160 @@
+#wrapper {
+  width: 100%;
+  position: relative;
+  main {
+    width: 100%;
+    height: 900px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+    z-index: 6;
+    .background {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+      z-index: -1;
+    }
+    header {
+      width: 100%;
+      height: 200px;
+      display: flex;
+      justify-content: center;
+      align-items: end;
+      img {
+        width: 80%;
+      }
+    }
+    .content {
+      width: 100%;
+      height: 700px;
+      display: grid;
+      grid-template-columns: 20% 80%;
+      .content--left {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img {
+          width: 70%;
+          margin-top: 30px;
+        }
+      }
+      .content--right {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 20px;
+        .content--right--top {
+          width: 100%;
+          height: 23%;
+          display: flex;
+          justify-content: center;
+          align-items: start;
+          img {
+            width: 95%;
+          }
+        }
+        .content--right--box {
+          width: 100%;
+          height: 77%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          .box-stick {
+            width: 100%;
+            height: 85%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 5px;
+            .banner {
+              width: 100%;
+              height: 70%;
+              display: flex;
+              justify-content: start;
+              align-items: center;
+              img {
+                width: 100%;
+                margin-left: -10px;
+              }
+            }
+            .gift {
+              width: 90%;
+              height: 20%;
+              display: flex;
+              justify-content: center;
+              align-items: end;
+              color: var(--white);
+              font-size: 18px;
+              font-weight: 800;
+              text-align: center;
+            }
+          }
+          .group-btn {
+            width: 100%;
+            height: 15%;
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            flex-direction: column;
+            gap: 20px;
+            .button {
+              width: 85%;
+              height: 30%;
+              position: relative;
+              img {
+                position: absolute;
+                width: 100%;
+              }
+              .button--text {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                text-align: center;
+                color: var(--white);
+                text-transform: uppercase;
+                font-weight: 900;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-top: 14px;
+              }
+              .group-btn--text-play {
+                font-size: 17px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 481px) {
+  #wrapper {
+    min-height: 1000px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    main {
+      width: 450px;
+      height: 950px;
+      box-shadow: 0px 0px 29px 31px rgba(0, 0, 0, 0.1);
+      z-index: 1;
+    }
+  }
+}

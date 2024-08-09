@@ -1,0 +1,66 @@
+$size: 15vw;
+
+.wrapper {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .red,
+  .green,
+  .blue,
+  .yellow {
+    border-radius: calc($size / 2);
+    animation: rot 2s infinite linear;
+    border-bottom-width: calc($size / 25);
+    border-bottom-style: solid;
+  }
+
+  .green,
+  .blue,
+  .yellow {
+    position: relative;
+    left: calc($size / 20);
+  }
+
+  .red {
+    width: $size;
+    height: $size;
+    border-bottom-color: red;
+  }
+
+  .green {
+    width: calc($size - ($size / 10));
+    height: calc($size - ($size / 10));
+    border-bottom-color: green;
+  }
+
+  .blue {
+    width: calc($size - ($size / 10 * 2));
+    height: calc($size - ($size / 10 * 2));
+    border-bottom-color: blue;
+  }
+
+  .yellow {
+    width: calc($size - ($size / 10 * 3));
+    height: calc($size - ($size / 10 * 3));
+    border-bottom-color: yellow;
+  }
+}
+
+@keyframes rot {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+html {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  height: 100vh;
+}
